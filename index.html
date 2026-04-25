@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseTrends Storefront</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* CSS Styles Here */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .hero { text-align: center; padding: 50px; background: #f4f4f4; }
+        .hero h1 { font-size: 2.5em; }
+        .hero button { padding: 10px 20px; font-size: 1em; margin: 10px; cursor: pointer; }
+        .products { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .product-card { border: 1px solid #ddd; border-radius: 5px; text-align: center; margin: 20px; padding: 20px; width: 200px; }
+        .buy-now { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; }
+        .footer { text-align: center; padding: 20px; background: #333; color: white; }
+        @media (max-width: 600px) {
+            .products { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>PulseTrends E-Commerce Store</h1>
+        <button onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Shop Galaxy Projector</button>
+        <button onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Shop Mini Blender</button>
+    </div>
+    <div class="products">
+        <div class="product-card">
+            <h2>Galaxy Projector</h2>
+            <p>Transform your space into a cosmic wonder.</p>
+            <button class="buy-now" onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Buy Now</button>
+        </div>
+        <div class="product-card">
+            <h2>Mini Blender</h2>
+            <p>Make smoothies and shakes on the go.</p>
+            <button class="buy-now" onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Buy Now</button>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Secure checkout powered by PayPal</p>
+    </div>
+</body>
+</html>
