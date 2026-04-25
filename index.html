@@ -3,44 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PulseTrends Storefront</title>
+    <title>Premium PulseTrends Storefront</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
     <style>
-        /* CSS Styles Here */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        .hero { text-align: center; padding: 50px; background: #f4f4f4; }
-        .hero h1 { font-size: 2.5em; }
-        .hero button { padding: 10px 20px; font-size: 1em; margin: 10px; cursor: pointer; }
-        .products { display: flex; justify-content: space-around; flex-wrap: wrap; }
-        .product-card { border: 1px solid #ddd; border-radius: 5px; text-align: center; margin: 20px; padding: 20px; width: 200px; }
-        .buy-now { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; }
-        .footer { text-align: center; padding: 20px; background: #333; color: white; }
-        @media (max-width: 600px) {
-            .products { flex-direction: column; align-items: center; }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background-image: url('hero-image.jpg');
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .product-tiers {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .countdown {
+            font-size: 2rem;
+            color: yellow;
+        }
+        .trust-badges, .social-proof {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
     <div class="hero">
-        <h1>PulseTrends E-Commerce Store</h1>
-        <button onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Shop Galaxy Projector</button>
-        <button onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Shop Mini Blender</button>
+        <h1>Welcome to PulseTrends Storefront</h1>
     </div>
-    <div class="products">
-        <div class="product-card">
-            <h2>Galaxy Projector</h2>
-            <p>Transform your space into a cosmic wonder.</p>
-            <button class="buy-now" onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Buy Now</button>
+
+    <div class="product-tiers">
+        <div>
+            <h2>Basic Tier</h2>
+            <p>$10/month</p>
+            <button onclick="addToCart('Basic')">Add to Cart</button>
         </div>
-        <div class="product-card">
-            <h2>Mini Blender</h2>
-            <p>Make smoothies and shakes on the go.</p>
-            <button class="buy-now" onclick="window.open('https://www.paypal.com/ncp/payment/298FSH9YUHPQ2', '_blank');">Buy Now</button>
+        <div>
+            <h2>Standard Tier</h2>
+            <p>$20/month</p>
+            <button onclick="addToCart('Standard')">Add to Cart</button>
+        </div>
+        <div>
+            <h2>Premium Tier</h2>
+            <p>$30/month</p>
+            <button onclick="addToCart('Premium')">Add to Cart</button>
         </div>
     </div>
-    <div class="footer">
-        <p>Secure checkout powered by PayPal</p>
+
+    <div class="cart">
+        <button onclick="viewCart()">🛒 View Cart</button>
     </div>
+
+    <div class="countdown">
+        <p>Special Offer Ends In: <span id="timer">00:00:00</span></p>
+    </div>
+
+    <div class="trust-badges">
+        <img src="badge1.png" alt="Trust Badge 1">
+        <img src="badge2.png" alt="Trust Badge 2">
+    </div>
+
+    <div class="social-proof">
+        <p>Join 1000+ happy customers!</p>
+    </div>
+
+    <div class="ai-chatbot">
+        <p>Need Help? <button onclick="openChatbot()">Chat with us!</button></p>
+    </div>
+
+    <div class="email-signup">
+        <form>
+            <label for="email">Sign up for our newsletter:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            // Add item to cart logic here
+        }
+        function viewCart() {
+            // View cart logic here
+        }
+        function openChatbot() {
+            // Open AI chatbot logic here
+        }
+        // Consider adding countdown timer logic here
+    </script>
 </body>
 </html>
